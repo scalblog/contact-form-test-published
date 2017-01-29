@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Contactez-moi</title>
+	 <meta charset="UTF-8">
+</head>
+<body style="font-family:Arial">
+<h2 style="text-align:center">Quel est votre projet ?</h2><br><br>
+<div><img src="ordi.jpg" alt="Faites votre demande ci-dessous" style="width:100%" /></div>
+<div style="background-color: #b3cfe5">
+<br>
+<!--	boite de contact -->
+<!-- choisir une google font -->
+<!-- section à remplacer par du CSS pour le margin -->
+<style>
+form {
+    margin: 2em 2em 2em 10em;
+}
+</style>
+<form action="/submit-data">
+	Votre nom <a style="color:red">*</a> : <br>
+	<input type="text" name="nom" required>
+	<br>
+	Email ou téléphone pour vous contacter <a style="color:red">*</a> : <br>
+	<!-- vérifier le nombre de caracteres qu on peut entrer ici -->
+	<input type="text" name="tel" required>
+	<br>
+	<!-- est ce qu il faut mettre des label ? -->
+	<label><input type="radio" name="jeSuis" value="particulier" checked> Je suis un particulier.<br></label>
+	<label><input type="radio" name="jeSuis" value="entreprise"> Je suis une entreprise.<br></label>
+	<label><input type="radio" name="jeSuis" value="autre"> Autre organisation.<br></label>
+	<br>
+	De quoi s'agit-il ? (choix multiple)<br>
+	<br>
+	<label><input type="checkbox" name="projet"> Création d'un site web</label><br>
+	<label><input type="checkbox" name="projet"> Création d'une appli mobile</label><br>
+	<label><input type="checkbox" name="projet"> Développer sa marque sur les réseaux sociaux</label><br>
+	<label><input type="checkbox" name="projet"> Dépannage / maintenance / sauvegarde </label><br>
+	<label><input type="checkbox" name="projet"> Formation / Devenir autonome</label><br>
+	<label><input type="checkbox" name="projet"> Bureautique / Saisie / Rédaction</label><br>
+	<label><input type="checkbox" name="projet"> Autre <input type="text" name="autre-projet"></label><br>
+	<br>
+	Description <a style="color:red">*</a> <br>
+	<textarea name="Description" rows="15" cols="40">
+	Décrivez votre projet.
+	</textarea> <br>
+	<br>
+	<p>Bénéficiez de la réduction/crédit d'impôt de 50 % sur le montant TTC de votre devis pour tous les travaux entrant dans le cadre du Service à la Personne.</p>
+	<!-- parametrer l envoi des donnees -->
+	<button type="submit">Envoyer les informations</button>
+	<br>
+	<a style="color:red">*</a> champs à remplir obligatoirement. <br>
+</form>
+</div>
+</body>
+</html>
