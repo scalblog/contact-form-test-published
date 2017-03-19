@@ -19,11 +19,11 @@ form {
 </style>
 <form action="/submit-data">
 	Votre nom <a style="color:red">*</a> : <br>
-	<input type="text" name="nom" required>
+	<input type="text" name="nom" id="name" required>
 	<br>
 	Email ou téléphone pour vous contacter <a style="color:red">*</a> : <br>
 	<!-- vérifier le nombre de caracteres qu on peut entrer ici -->
-	<input type="text" name="tel" required>
+	<input type="text" name="contact" id="contact" required>
 	<br>
 	<!-- est ce qu il faut mettre des label ? -->
 	<label><input type="radio" name="jeSuis" value="particulier" checked> Je suis un particulier.<br></label>
