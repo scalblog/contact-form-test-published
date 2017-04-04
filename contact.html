@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html>
 <head>
 	<title>Contactez-moi</title>
 	 <meta charset="UTF-8">
@@ -17,13 +17,13 @@ form {
     margin: 2em 2em 2em 10em;
 }
 </style>
-<form action="/submit-data" method="">
+<form action="/submit-data">
 	Votre nom <a style="color:red">*</a> : <br>
-	<input type="text" name="nom" id="name" required>
+	<input type="text" name="nom" required>
 	<br>
 	Email ou téléphone pour vous contacter <a style="color:red">*</a> : <br>
 	<!-- vérifier le nombre de caracteres qu on peut entrer ici -->
-	<input type="text" name="contact" id="contact" required>
+	<input type="text" name="tel" required>
 	<br>
 	<!-- est ce qu il faut mettre des label ? -->
 	<label><input type="radio" name="jeSuis" value="particulier" checked> Je suis un particulier.<br></label>
@@ -36,14 +36,12 @@ form {
 	<label><input type="checkbox" name="projet"> Création d'une appli mobile</label><br>
 	<label><input type="checkbox" name="projet"> Développer sa marque sur les réseaux sociaux</label><br>
 	<label><input type="checkbox" name="projet"> Dépannage / maintenance / sauvegarde </label><br>
-	<label><input type="checkbox" name="projet"> Formation / Découvrir / Devenir autonome</label><br>
+	<label><input type="checkbox" name="projet"> Formation / Devenir autonome</label><br>
 	<label><input type="checkbox" name="projet"> Bureautique / Saisie / Rédaction</label><br>
 	<label><input type="checkbox" name="projet"> Autre <input type="text" name="autre-projet"></label><br>
 	<br>
 	Description <a style="color:red">*</a> <br>
-	<textarea name="Description" rows="15" cols="40">
-	Décrivez votre projet.
-	</textarea> <br>
+	<textarea name="Description" rows="15" cols="40" placeholder="Décrivez votre projet."></textarea> <br>
 	<br>
 	<p>Bénéficiez de la réduction/crédit d'impôt de 50 % sur le montant TTC de votre devis pour tous les travaux entrant dans le cadre du Service à la Personne.</p>
 	<!-- parametrer l envoi des donnees -->
@@ -51,7 +49,40 @@ form {
 	<br>
 	<a style="color:red">*</a> champs à remplir obligatoirement. <br>
 </form>
-	<!-- ajouter un call to action avec mon numéro de 06 ? -->
+
+<form method="post" action="">
+   	<p>
+       <label for="nom">Votre nom</label> : <input type="text" name="nom" id="nom" required />
+   	</p>
+   	<p>
+   		<label for="email">Email ou téléphone pour vous contacter</label> : <input type="text" name="email" id="email" required />
+   	</p>
+   	<p>
+       <input type="radio" name="jeSuis" value="particulier" id="particulier" /> <label for="particulier">Je suis un particulier.</label><br />
+       <input type="radio" name="jeSuis" value="entreprise" id="entreprise" /> <label for="entreprise">Je suis une entreprise.</label><br />
+       <input type="radio" name="jeSuis" value="organisation" id="organisation" /> <label for="particulier">Autre organisation / Association.</label>
+   </p>
+   	<p>
+       De quoi s'agit-il ? <br />
+       <input type="checkbox" name="site" id="site" /> <label for="site">Création d'un site web</label><br />
+       <input type="checkbox" name="appli" id="appli" /> <label for="appli">Création d'une appli mobile</label><br />
+       <input type="checkbox" name="sociaux" id="sociaux" /> <label for="sociaux">Développer sa marque sur les réseaux sociaux</label><br />
+       <input type="checkbox" name="maintenance" id="maintenance" /> <label for="maintenance">Dépannage / maintenance / sauvegarde</label>
+       <input type="checkbox" name="formation" id="formation" /> <label for="formation">Formation / Devenir autonome</label>
+       <input type="checkbox" name="redaction" id="redaction" /> <label for="redaction">Bureautique / Saisie / Rédaction</label>
+       <input type="checkbox" name="autre" id="autre" /> <label for="autre">Autre : <input type="text" name="autre-projet"></label>
+  	</p>
+   	<p>
+       <label for="projet">Décrivez votre projet ou votre demande</label><br />
+       <textarea name="projet" id="projet"></textarea>
+   	</p>
+   	<p>Bénéficiez de la réduction/crédit d'impôt de 50 % sur le montant TTC de votre devis pour tous les travaux entrant dans le cadre du Service à la Personne.</p>
+	<!-- parametrer l envoi des donnees -->
+	<button type="submit">Envoyer les informations</button>
+	<br>
+	<a style="color:red">*</a> champs à remplir obligatoirement. <br>
+</form>
+
 </div>
 </body>
 </html>
