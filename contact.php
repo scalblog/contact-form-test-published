@@ -1,3 +1,4 @@
+<?php
 if (!empty($_POST['message']) && !empty($_POST['mail']) && isset($_POST['sujet'])) {
 
 	if (filter_var($_POST['mail'], FILTER_VALIDATE_EMAIL)) {
